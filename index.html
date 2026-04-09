@@ -32,9 +32,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Angkor&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="./js/index.js"></script>
 
 </head>
@@ -62,10 +64,10 @@
     <div class="hero">
         <div class="common-fram">
             <div class="hero-text">
-                <h1 class="alex">One Key,</h1>
-                <h2 class="angkor">Infinite Flow.</h2>
-                <h5>본질을 꿰뚫는 하나의 시선 끝에 펼쳐질, 제약 없는 영감의 흐름을 선호합니다.</h5>
-                <p>Web designer 이은지</p>
+                <h1 class="alex fade-in-up">One Key,</h1>
+                <h2 class="angkor fade-in-up">Infinite Flow.</h2>
+                <h5 class="fade-in-up">본질을 꿰뚫는 하나의 시선 끝에 펼쳐질, 제약 없는 영감의 흐름을 선호합니다.</h5>
+                <p class="fade-in-up">Web designer 이은지</p>
             </div>
         
             <figure>
@@ -74,11 +76,11 @@
            
 
     <!-- 버튼 레이아웃  -->
-   <h1 class="welcome-title alex">Welcome</h1>
-    <div class="envelope-area">
+   <h1 class="welcome-title alex fade-in-up">Welcome</h1>
+    <div class="envelope-area fade-in-up">
         <img src="./img/pop.png" alt="White Envelope" class="envelope-image">
     </div>
-    <div class="button-container">
+    <div class="button-container fade-in-up">
         <button class="welcome-btn" id="btnConcept">Concept</button>
         <button class="welcome-btn" id="btnColorsFonts">Colors And Fonts</button>
     </div>
@@ -170,18 +172,18 @@
 
 
             <figure>
-                <div class="look"><img src="./img/look1.png" alt="자물쇠"></div>
+                <div class="look fade-in-up"><img src="./img/look1.png" alt="자물쇠"></div>
             </figure>
 
             <!-- 어바웃 미 -->
-            <div class="about-me lace-style">
-                <div class="about-text">
-                    <h2 class="alex">About  me</h2>
-                    <h5>사용자 경험을 기반으로 직관적이고 트렌디한 웹 디자인을 구현합니다.<br>데이터와 흐름을 고려한 설계를 통해, 사용자가 머무르고 싶은 화면을 만듭니다.<br>디자인과 사용성, 두 가지를 모두 만족시키는 결과물을 만들기 위하여 노력합니다.</h5>
+            <div class="about-me lace-style fade-in-up">
+                <div class="about-text fade-in-up">
+                    <h2 class="alex fade-in-up">About  me</h2>
+                    <h5 class="fade-in-up">사용자 경험을 기반으로 직관적이고 트렌디한 웹 디자인을 구현합니다.<br>데이터와 흐름을 고려한 설계를 통해, 사용자가 머무르고 싶은 화면을 만듭니다.<br>디자인과 사용성, 두 가지를 모두 만족시키는 결과물을 만들기 위하여 노력합니다.</h5>
     
-                    <button>profile</button>
+                    <button class="fade-in-up">profile</button>
     
-                    <div class="grid-text">
+                    <div class="grid-text fade-in-up">
                         <div class="text1">
                             <h4 class="alex">Design Strengths</h4>
                             <ul>
@@ -214,9 +216,9 @@
                     </div>
                 </div>
                 <div class="skills-section">
-                    <h2 class="skills-title alex">Skill</h2>
+                    <h2 class="skills-title alex fade-in-up">Skill</h2>
                     
-                    <div class="skills-grid">
+                    <div class="skills-grid fade-in-up">
                         
                         <div class="skill-card">
                             <div class="skill-icon"><img src="./img/photo-logo.png" alt="포토샵"></div>
@@ -392,16 +394,18 @@
 </div>
     <!-- 팝업 진열 -->
     <section class="popup-section">
-       <h2 class="popup-title alex">Popup</h2>
-        <div class="elastic-container">
-            <svg width="100%" height="100" strok="red"><path class="elastic-path" fill="transparent" stroke="black"></path></svg>
+       <h2 class="popup-title alex fade-in-up">Popup</h2>
+        <div class="elastic-container fade-in-up">
+            <svg style="height: 50px; width: 100%;" stroke="red">
+                <path class="elastic-path" fill="transparent" stroke="black"></path>
+            </svg>
         </div>
 
-        <div class="intro-box">
+        <div class="intro-box fade-in-up">
             <p>오늘 하루는 생각보다 별일 없이 지나간 것 같다가도, <br>괜히 한 번 더 보게 된 색감 같은 것들. </p>
         </div>
 
-        <div class="portfolio-block">
+        <div class="portfolio-block fade-in-up">
             <div class="portfolio-info">
                 <h3><span class="info-title-text">블랙프라이데이 1</span> <img src="./img/ribon-icon.png" alt="리본" class="title-icon"></h3>
                 <p class="info-desc-text">첫 번째 블랙프라이데이 상품을 홍보하기 위하여 제작하였습니다. 시선을 사로잡는 네온 컬러를 활용했습니다.</p>
@@ -422,7 +426,7 @@
         </div>
 
         <div class="lace-divider"></div>
-        <div class="portfolio-block" id="blook2">
+        <div class="portfolio-block fade-in-up" id="blook2">
             <div class="portfolio-info">
                 <h3><span class="info-title-text">블랙프라이데이 1</span> <img src="./img/ribon-icon.png" alt="리본" class="title-icon"></h3>
                 <p class="info-desc-text">첫 번째 블랙프라이데이 상품을 홍보하기 위하여 제작하였습니다. 시선을 사로잡는 네온 컬러를 활용했습니다.</p>
@@ -447,36 +451,38 @@
     </section>
     
     <!-- 포스터 영역 -->
-     <h2 class="popup-title alex">Poster</h2>
-     <div class="elastic-container">
-            <svg width="100%" height="100"><path class="elastic-path" fill="transparent" stroke="blue"></path></svg>
-        </div>
 
-        <div class="line-container" id="elasticLineContainer">
-            <svg class="elasticSvg" width="100%" height="100px" preserveAspectRatio="none">
-                <path class="elasticPath" width="100vh" stroke="#cc3a3a" stroke-width="1" fill="none" />
+    <h2 class="poster-title alex fade-in-up">Poster</h2>
+        <div class="elastic-container fade-in-up">
+            <svg style="height: 50px; width: 100%;" stroke="red">
+                <path class="elastic-path" fill="transparent" stroke="black"></path>
             </svg>
         </div>
-
-        <div class="intro-box">
+        <div class="intro-box fade-in-up" style="text-align: center;">
             <p>오늘 하루는 생각보다 별일 없이 지나간 것 같다가도, <br>괜히 한 번 더 보게 된 색감 같은 것들. </p>
         </div>
-     <div class="gallery-container common-fram ">
-        <div class="sliders-area">
-            <div class="slider-column left-column">
-                <div class="slider-track" id="left-track"></div>
-            </div>
-            <div class="slider-column right-column">
-                <div class="slider-track" id="right-track"></div>
-            </div>
-        </div>
 
-        <div class="info-area">
-            <h2 id="info-title">포스터를 클릭해보세요</h2>
-            <p id="info-desc">포스터를 클릭하시면, 이곳에 상세한 설명이 즉시 나타납니다. </p>
+    <div class="container fade-in-up" id="boundary">
+
+    <div class="frame-inner">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide-1" data-title="블랙프라이데이 1" data-desc="블랙프라이데이 기념 상품을 홍보하기 위하여 제작하였습니다. 감각적인 무드를 담은 첫 번째 포스터입니다."><img src="./img/poster1-1.png" alt=""></div>
+          <div class="swiper-slide slide-2" data-title="MA CHERIE 2" data-desc="선택한 나를 위한 향. 당신의 특별한 순간을 위한 두 번째 향수 포스터입니다."><img src="./img/poster1-2.png" alt=""></div>
+          <div class="swiper-slide slide-3" data-title="네이처 그린 3" data-desc="자연의 싱그러움을 담은 세 번째 상품 설명입니다. 스와이프하여 확인해보세요."><img src="./img/poster1-3.png" alt=""></div>
+          <div class="swiper-slide slide-3" data-title="네이처 그린 3" data-desc="자연의 싱그러움을 담은 세 번째 상품 설명입니다. 스와이프하여 확인해보세요."><img src="./img/poster2-1.png" alt=""></div>
+          <div class="swiper-slide slide-3" data-title="네이처 그린 3" data-desc="자연의 싱그러움을 담은 세 번째 상품 설명입니다. 스와이프하여 확인해보세요."><img src="./img/poster2-2.png" alt=""></div>
+          <div class="swiper-slide slide-3" data-title="네이처 그린 3" data-desc="자연의 싱그러움을 담은 세 번째 상품 설명입니다. 스와이프하여 확인해보세요."><img src="./img/poster2-3.png" alt=""></div>
         </div>
+      </div>
     </div>
-    
+
+    <div class="glass-box" id="dragBox">
+      <h3 id="infoTitle">블랙프라이데이 1</h3>
+      <p id="infoDesc">블랙프라이데이 기념 상품을 홍보하기 위하여 제작하였습니다. 감각적인 무드를 담은 첫 번째 포스터입니다.</p>
+    </div>
+
+  </div>
 
 </body>
 
