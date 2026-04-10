@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
  
 
+
     // 열쇠 두둥실 애니메이션
         
     const floatingKey = document.querySelector('.key');
@@ -44,6 +45,8 @@ document.addEventListener("DOMContentLoaded", () => {
             ease: "sine.inOut" 
             
         });
+
+
 
 // 웰컴 버튼 
         const btnConcept = document.getElementById('btnConcept');
@@ -65,6 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
             if (event.target === modalConcept) modalConcept.classList.remove('active');
             if (event.target === modalColorsFonts) modalColorsFonts.classList.remove('active');
         });
+
+
 
 
         // 팝업 영역
@@ -124,6 +129,9 @@ class ElasticLine {
         this.animateLine();
     }
 
+
+
+
     initEvents() {
         // 브라우저 리사이즈 대응
         window.addEventListener('resize', () => {
@@ -144,6 +152,10 @@ class ElasticLine {
         });
     }
 
+
+
+
+
     // 화살표 함수를 사용하여 this 컨텍스트 유지
     animateLine = () => {
         this.cx += (this.targetX - this.cx) * 0.1;
@@ -160,6 +172,10 @@ class ElasticLine {
         requestAnimationFrame(this.animateLine);
     }
 }
+
+
+
+
 
 // 3. 실제 적용 (초기화)
 // 페이지 내의 모든 .elastic-container를 찾아 각각 독립된 탄성 선 객체로 만듦
@@ -241,4 +257,135 @@ containers.forEach(container => new ElasticLine(container));
       isDragging = false;
     });
 
-        });
+
+
+
+
+
+    const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.2 
+  };
+
+ 
+  const scrollAnimOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.2 
+  };
+
+  // 변수명 변경: observer -> scrollAnimObserver
+  const scrollAnimObserver = new IntersectionObserver((entries, currentObserver) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // 화면에 나타나면 active 클래스 추가
+        entry.target.classList.add('active');
+        
+        // 요소가 한 번 나타난 후에는 다시 관찰하지 않도록 해제
+        currentObserver.unobserve(entry.target);
+      }
+    });
+  }, scrollAnimOptions);
+
+  // 변수명 변경: elements -> scrollAnimTargets
+  // HTML에서 .scroll-element 클래스를 가진 모든 요소를 찾아 관찰 시작
+  const scrollAnimTargets = document.querySelectorAll('.scroll-element');
+  scrollAnimTargets.forEach(target => scrollAnimObserver.observe(target));
+
+
+
+
+// 배너
+
+
+
+
+
+
+
+     
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

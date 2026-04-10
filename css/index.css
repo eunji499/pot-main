@@ -17,26 +17,9 @@ html {
             transform: translateY(0);
         }
 
- #distortionCanvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
- }
+ 
 
-/* 캔버스 위에 오버레이하여 가우시안 블러 적용 */
-#blurOverlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(10px); 
-    pointer-events: none; 
-}
-
- /* 헤더 */
+ /* 헤더---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
         header {
             position: fixed; 
             top: 40px; 
@@ -81,6 +64,8 @@ html {
 
         header nav ul li a:hover {
             color: #BE3734; }
+
+/* 히어로 섹션-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 .hero{
     height: 100vh;
@@ -129,10 +114,13 @@ figure .look {
     align-items: center;
 }
 
+/* 어바웃 섹션------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
 .about-text {
     width: auto;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
     text-align: center;
+    background-color: #ffffff;
 }
 
 .about-text h2{
@@ -158,7 +146,6 @@ figure .look {
             box-shadow: none; 
             background: none; 
             margin: 2rem 0;
-            background-color: #ECF6F7; 
             border: 1px solid #2D2928; 
             border-radius: 50px;
             padding: 0.5rem 6rem; 
@@ -209,23 +196,27 @@ button img{
     font-weight: 400;
     font-size: 0.8rem;
 }
-.lace-style{
-    border: 1px solid red;
-    padding: 90px 90px;
-    background: 
-    url(../img/left-corner.png) no-repeat 0% 0%,
-    url(../img/right-lace.png) repeat-y 100% 0%,
-    url(../img/down-lace.png) repeat-x 0% 100%,
-    url(../img/left-lace.png) repeat-y 0% 0%,
-    url(../img/up-lace.png) repeat-x 0% 0%;
+
+.lace-style {
+    border: 90px solid transparent; 
+    border-image: url(../img/lase-toll.png) 100 round;
 }
 
-/* CSS 그리드 시스템 적용 영역 */
+.content-box2 {
+    background-color: #ffffff; 
+    
+    /* 기존 코드 아래에 이 속성을 추가해 보세요! */
+    /* 0(가로) 0(세로) 0(흐림도) 2px(퍼짐 정도) 색상 */
+    box-shadow: 0 0 0 10px #ffffff; 
+}
+
+/* 스킬 그리드 시스템 섹션-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(320px, 1fr));
     gap: 40px 100px;
     padding: 2rem 17rem;
+    background-color: #ffffff;
 }
 
         /* 개별 스킬 카드 */
@@ -286,11 +277,12 @@ button img{
             padding-left: 17rem;
             padding-top: 2rem;
             color: #BE3734;
+            background-color: #ffffff;
         }
 
 
 
- /* 웰컴 페이지  */
+ /* 웰컴 페이지-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  */
         .welcome-title {
             color: #BE3734;
             font-size: 9rem;
@@ -322,7 +314,7 @@ button img{
             justify-content: center;
 }
         /* 버튼 스타일 */
-        .welcome-btn {
+        .btn {
             appearance: none; 
             -webkit-appearance: none; 
             -moz-appearance: none;
@@ -342,7 +334,7 @@ button img{
             cursor: pointer; 
             transition: all 0.3s ease;
         }
-        .welcome-btn:hover { 
+        .btn:hover { 
             background-color: #BE3734; 
             border-color: #2D2928; 
             color: #ffffff; }
@@ -672,7 +664,7 @@ button img{
 
 /* 포스터------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
        
-/* 전체를 감싸는 컨테이너 (드래그 제한 구역 역할) */
+
     .container {
       position: relative;
       height: 1200px;
@@ -685,7 +677,7 @@ button img{
       margin-top: 10rem;
     }
 
-    /* 거울/프레임 내부 영역 */
+    
     .frame-inner {
       position: relative;
       width: 1200px;  /* 기존 400px에서 증가 */
@@ -695,17 +687,17 @@ button img{
       align-items: center;
     }
 
-    /* Swiper 스타일 (실제 포스터 크기) */
+    /* Swiper 스타일 ------------------------------------------------------------------------------------------------------------------------------------------------ */
     .swiper {
       width: 600px;  /* 기존 320px에서 증가 */
       height: 900px; /* 기존 450px에서 증가 */
     }
-/* 슬라이드 내부의 이미지 태그가 슬라이드 크기에 딱 맞게 꽉 차도록 설정 */
+
     .swiper-slide img {
       width: 100%;
       height: 100%;
-      object-fit: cover; /* 비율을 유지하면서 빈틈없이 꽉 채움 */
-      border-radius: 18px; /* 이미지가 프레임의 둥근 모서리를 덮지 않도록 동일하게 깎아줌 */
+      object-fit: cover; 
+      border-radius: 18px; 
       display: block;
     }
     .swiper-slide {
@@ -720,7 +712,7 @@ button img{
     }
     
 
-    /* 타이포 섹션 (글래스모피즘 + 드래그) */
+    /* 타이포 섹션 (글래스모피즘 + 드래그)------------------------------------------------------------------------------------------------------------------------- */
    .glass-box {
       position: absolute;
       left: 850px;
@@ -729,30 +721,30 @@ button img{
       height: 400px;
       padding: 20px;
       
-      /* 🌟 1. 빛 반사를 표현하는 사선 그라데이션 배경 */
+     
       background: linear-gradient(
         135deg,
         rgba(255, 255, 255, 0.4) 0%,
         rgba(255, 255, 255, 0.05) 100%
       );
       
-      /* 🌟 2. 블러 처리 및 뒷배경 채도(saturate) 증가로 굴절 효과 극대화 */
+      
       backdrop-filter: blur(3px) saturate(150%);
       -webkit-backdrop-filter: blur(16px) saturate(150%);
       
-      /* 🌟 3. 입체적인 유리 단면을 위한 비대칭 테두리 */
+      
       border: 1px solid rgba(255, 255, 255, 0.5);
       border-right-color: rgba(255, 255, 255, 0.1);
       border-bottom-color: rgba(255, 255, 255, 0.1);
       border-radius: 16px;
       
-      /* 🌟 4. 볼륨감을 위한 복합 그림자 (바깥 그림자 + 안쪽 하이라이트) */
-      box-shadow: 
-        0 10px 30px rgba(0, 0, 0, 0.15),             /* 떠 있는 듯한 바깥 그림자 */
-        inset 0 1.5px 2px rgba(255, 255, 255, 0.8),  /* 상단 모서리 빛 맺힘 (핵심!) */
-        inset 0 -1.5px 2px rgba(255, 255, 255, 0.1); /* 하단 모서리 반사광 */
       
-      /* 드래그 및 기타 설정 (기존과 동일) */
+      box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.15),             
+        inset 0 1.5px 2px rgba(255, 255, 255, 0.8),  
+        inset 0 -1.5px 2px rgba(255, 255, 255, 0.1); 
+      
+      
       cursor: grab;
       z-index: 100;
       user-select: none;
@@ -766,7 +758,7 @@ button img{
       margin: 0 0 10px 0;
       font-size: 18px;
       color: #111;
-      text-shadow: 0 1px 2px rgba(255,255,255,0.8); /* 글씨가 묻히지 않게 약간의 흰색 그림자 추가 */
+      text-shadow: 0 1px 2px rgba(255,255,255,0.8); 
     }
 
     .glass-box p {
@@ -782,12 +774,200 @@ button img{
         font-size: 6.5rem;
         font-weight: 400;
         margin-top: 25rem;
-        padding-left: 6rem;
 
     }
 
 
 
+/* --- 아래쪽 포크 및 버튼 영역 --- */
+.bottom-section {
+  display: flex;
+  flex-direction: row; /* 포크와 버튼을 양옆으로 나란히 배치 */
+  align-items: center; /* 세로 기준 중앙 정렬 */
+  justify-content: center;
+  gap: 60px; /* 포크 이미지와 버튼 사이의 간격 */
+}
+
+/* --- 스크롤 애니메이션 상태 (기존과 동일하게 유지) --- */
+.scroll-element {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* 포크가 먼저 올라오고, 버튼이 살짝 뒤따라 올라오도록 딜레이 적용 */
+.concept-button.scroll-element {
+  transition-delay: 0.15s; 
+}
+
+/* 애니메이션 실행 시 */
+.scroll-element.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fork-image {
+  max-width: 400px; /* 가로로 긴 이미지이므로 너비를 넉넉하게 줍니다 */
+  height: auto;
+}
+/* --- 버튼 및 이미지 기본 디자인 (기존 스타일이 있다면 생략 가능) --- */
+.concept-button {
+  appearance: none; 
+            -webkit-appearance: none; 
+            -moz-appearance: none;
+            outline: none; 
+            box-shadow: none; 
+            background: none; 
+            margin: 2rem 0;
+            border: 1px solid #2D2928; 
+            border-radius: 50px;
+            padding: 0.5rem 6rem; 
+            color: #2D2928; 
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem; 
+            font-weight: 600; 
+            letter-spacing: 0.5px;
+            cursor: pointer; 
+            transition: all 0.3s ease;
+}
+.concept-button:hover{
+    background-color: #BE3734; 
+            border-color: #2D2928; 
+            color: #ffffff;
+
+}
+
+
+    
+
+    /* 배너 섹션----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.parallax-slider-wrapper {
+            width: 100%;
+            overflow: hidden; /* 콘텐츠가 넘치지 않도록 */
+            padding: 50px 0;
+        }
+
+        /* 헤더 스타일 */
+        .slider-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .slider-header h1 {
+            font-family: 'Georgia', serif;
+            font-weight: 300;
+            font-size: 3em;
+            color: #b07070;
+            margin: 0;
+        }
+        .slider-header p {
+            max-width: 600px;
+            margin: 10px auto;
+            font-size: 0.9em;
+            color: #777;
+            line-height: 1.6;
+        }
+
+        /* 슬라이드 행 공통 스타일 */
+        .slider-row {
+            display: flex; /* 가로 배열 */
+            width: max-content; /* 내부 콘텐츠 너비만큼 컨테이너 확장 */
+            margin-bottom: 20px;
+            will-change: transform; /* 애니메이션 성능 향상 */
+        }
+
+        /* 슬라이드 아이템 공통 스타일 */
+        .item {
+            flex-shrink: 0; /* 크기가 줄어들지 않도록 */
+            width: 400px; /* 아이템 너비 */
+            height: 250px; /* 아이템 높이 */
+            margin-right: 20px; /* 아이템 간격 */
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease; /* 호버 시 약간 확대되는 시각 효과 */
+        }
+
+        /* 이미지 스타일 */
+        .item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 이미지가 영역을 꽉 채우도록 */
+        }
+
+        /* 텍스트 오버레이 스타일 (그림의 타이포 흉내) */
+        .item .item-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 80%;
+            color: white;
+            padding: 20px;
+            background: rgba(0,0,0,0.4); /* 글자 가독성을 위해 */
+            opacity: 0; /* 평소에는 숨김 */
+            transition: opacity 0.3s ease; /* 부드럽게 나타나도록 */
+        }
+
+        /* 마우스 호버 시 텍스트 보이기 (정지 시 더 잘 보이게) */
+        .parallax-slider-wrapper:hover .item-text {
+            opacity: 1;
+        }
+
+        .item .item-text h2 {
+            font-size: 1.5em;
+            margin: 0 0 10px;
+        }
+        .item .item-text p {
+            font-size: 0.9em;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* 장식용 칼 아이콘 (위치 조정) */
+        .deco-knife {
+            position: absolute;
+            width: 150px;
+            height: auto;
+            pointer-events: none; /* 클릭 방지 */
+            z-index: 5;
+        }
+        .knife-right { top: 350px; right: 20px; }
+        .knife-left { bottom: 250px; left: 20px; transform: scaleX(-1); }
+
+        /* 무한 슬라이드 애니메이션 정의 */
+        @keyframes scrollLeft {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                /* 콘텐츠 전체 너비의 절반만큼 이동 (복제된 콘텐츠가 이어지도록) */
+                transform: translateX(-50%); 
+            }
+        }
+
+        /* 애니메이션 적용 (기본값) */
+        .slider-row {
+            animation: scrollLeft linear infinite;
+        }
+
+        /* 각 행에 다른 속도 설정 */
+        .row-1 {
+            animation-duration: 40s; /* 가장 느림 */
+        }
+        .row-2 {
+            animation-duration: 25s; /* 중간 속도 */
+        }
+        .row-3 {
+            animation-duration: 15s; /* 가장 빠름 */
+        }
+
+        /* JavaScript가 적용될 때 정지 상태를 위한 클래스 */
+        .js-paused {
+            animation-play-state: paused !important;
+        }
 
 
 
@@ -799,14 +979,7 @@ button img{
 
 
 
-
-
-
-
-
-
-
-
+    /* 반응형 섹션---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 @media(max-width: 1720px){ }
    
