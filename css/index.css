@@ -78,7 +78,23 @@ html {
     width: auto;
     margin: 0 6rem;
 }
+/* 동영상*/
+.bg-video-layer {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh; 
+    object-fit: cover; 
+    z-index: -999; 
+    pointer-events: none; 
+    opacity: 0.2;
+}
 
+.your-typography-container {
+    position: relative; 
+    z-index: 1; 
+}
 .hero-text h1{
     font-size: 12rem;
     color: #BE3734;
@@ -100,6 +116,7 @@ html {
 .hero-text p{
     color: #2D2928;
     font-weight: 300;
+    margin-top: 1rem;
 }
 figure .key{
     position: absolute;
@@ -108,7 +125,7 @@ figure .key{
 }
 
 figure .look {
-    margin: 30rem auto 0;
+    margin: 80rem auto 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -204,9 +221,6 @@ button img{
 
 .content-box2 {
     background-color: #ffffff; 
-    
-    /* 기존 코드 아래에 이 속성을 추가해 보세요! */
-    /* 0(가로) 0(세로) 0(흐림도) 2px(퍼짐 정도) 색상 */
     box-shadow: 0 0 0 10px #ffffff; 
 }
 
@@ -288,7 +302,7 @@ button img{
             font-size: 9rem;
             margin-bottom: 4rem;
             text-align: center;
-            margin-top: 45rem;
+            margin-top: 60rem;
 }
         .envelope-area {
             position: relative; 
@@ -520,11 +534,10 @@ button img{
       /* 모든 탄성 선의 기본 색상 지정 */
 .elastic-path {
     stroke: #BE3734; 
-    stroke-width: 1px; /* 선의 굵기도 여기서 조절 가능합니다 */
-    transition: stroke 0.3s ease; /* 색상이 바뀔 때 부드럽게 변하도록 애니메이션 추가 */
+    stroke-width: 1px; 
+    transition: stroke 0.3s ease; 
 }
 
-/* 특정 클래스가 붙은 경우 다른 색상 적용 */
 .point-color .elastic-path {
     stroke: #BE3734;
 }  
@@ -560,7 +573,7 @@ button img{
         /* 포트폴리오 블록 (하늘색 배경 영역) */
         .portfolio-block {
             height: 300px;
-            background-color: #D7E8F5; 
+            background-color: #ffffff; 
             display: flex; 
             justify-content: space-between;
             align-items: center;
@@ -594,7 +607,7 @@ button img{
             line-height: 1.8;
         }
 
-        /* 포스터 이미지 영역 */
+        /* 포스터 이미지 영역 -----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
         .portfolio-images {
             flex: 2.5; 
             display: flex;
@@ -609,7 +622,7 @@ button img{
             box-shadow: 0 10px 20px rgba(0,0,0,0.15); 
         }
 
-        /* 하단 레이스 장식 영역 */
+        /* 하단 레이스 장식 영역------------------------------------------------------------------------------------------------------------------------------------------- */
         .lace-divider {
             height: 35px; 
             width: 100%;
@@ -662,7 +675,7 @@ button img{
 
 
 
-/* 포스터------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* 포스터--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
        
 
     .container {
@@ -675,6 +688,7 @@ button img{
       align-items: center;
       overflow: hidden; 
       margin-top: 10rem;
+      margin-bottom: 15rem;
     }
 
     
@@ -687,7 +701,7 @@ button img{
       align-items: center;
     }
 
-    /* Swiper 스타일 ------------------------------------------------------------------------------------------------------------------------------------------------ */
+    /* Swiper 스타일 -------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
     .swiper {
       width: 600px;  /* 기존 320px에서 증가 */
       height: 900px; /* 기존 450px에서 증가 */
@@ -712,7 +726,7 @@ button img{
     }
     
 
-    /* 타이포 섹션 (글래스모피즘 + 드래그)------------------------------------------------------------------------------------------------------------------------- */
+    /* 타이포 섹션 (글래스모피즘 + 드래그)------------------------------------------------------------------------------------------------------------------------------------------------------- */
    .glass-box {
       position: absolute;
       left: 850px;
@@ -779,38 +793,38 @@ button img{
 
 
 
-/* --- 아래쪽 포크 및 버튼 영역 --- */
+/* --- 아래쪽 포크 및 버튼 영역 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 .bottom-section {
   display: flex;
-  flex-direction: row; /* 포크와 버튼을 양옆으로 나란히 배치 */
-  align-items: center; /* 세로 기준 중앙 정렬 */
+  flex-direction: row; 
+  align-items: center; 
   justify-content: center;
-  gap: 60px; /* 포크 이미지와 버튼 사이의 간격 */
+  gap: 60px; 
 }
 
-/* --- 스크롤 애니메이션 상태 (기존과 동일하게 유지) --- */
+
 .scroll-element {
   opacity: 0;
   transform: translateY(60px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-/* 포크가 먼저 올라오고, 버튼이 살짝 뒤따라 올라오도록 딜레이 적용 */
+
 .concept-button.scroll-element {
   transition-delay: 0.15s; 
 }
 
-/* 애니메이션 실행 시 */
+
 .scroll-element.active {
   opacity: 1;
   transform: translateY(0);
 }
 
 .fork-image {
-  max-width: 400px; /* 가로로 긴 이미지이므로 너비를 넉넉하게 줍니다 */
+  max-width: 400px; 
   height: auto;
 }
-/* --- 버튼 및 이미지 기본 디자인 (기존 스타일이 있다면 생략 가능) --- */
+
 .concept-button {
   appearance: none; 
             -webkit-appearance: none; 
@@ -840,134 +854,344 @@ button img{
 
     
 
-    /* 배너 섹션----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+ /* 배너 섹션----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-.parallax-slider-wrapper {
-            width: 100%;
-            overflow: hidden; /* 콘텐츠가 넘치지 않도록 */
-            padding: 50px 0;
-        }
 
-        /* 헤더 스타일 */
-        .slider-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .slider-header h1 {
-            font-family: 'Georgia', serif;
-            font-weight: 300;
-            font-size: 3em;
-            color: #b07070;
-            margin: 0;
-        }
-        .slider-header p {
-            max-width: 600px;
-            margin: 10px auto;
-            font-size: 0.9em;
-            color: #777;
-            line-height: 1.6;
-        }
+.banner-slider {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16/ 9; 
+}
 
-        /* 슬라이드 행 공통 스타일 */
-        .slider-row {
-            display: flex; /* 가로 배열 */
-            width: max-content; /* 내부 콘텐츠 너비만큼 컨테이너 확장 */
-            margin-bottom: 20px;
-            will-change: transform; /* 애니메이션 성능 향상 */
-        }
+.banner-slider .swiper-slide {
+    width: 100%;
+    height: 100%;
+}
 
-        /* 슬라이드 아이템 공통 스타일 */
-        .item {
-            flex-shrink: 0; /* 크기가 줄어들지 않도록 */
-            width: 400px; /* 아이템 너비 */
-            height: 250px; /* 아이템 높이 */
-            margin-right: 20px; /* 아이템 간격 */
-            position: relative;
-            overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease; /* 호버 시 약간 확대되는 시각 효과 */
-        }
+.banner-slider .swiper-slide-bn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    display: block;
+}
 
-        /* 이미지 스타일 */
-        .item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* 이미지가 영역을 꽉 채우도록 */
-        }
+.banner .common-frame{
+    width: 1920px;
+    margin: 0 auto;
+}
 
-        /* 텍스트 오버레이 스타일 (그림의 타이포 흉내) */
-        .item .item-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            width: 80%;
-            color: white;
-            padding: 20px;
-            background: rgba(0,0,0,0.4); /* 글자 가독성을 위해 */
-            opacity: 0; /* 평소에는 숨김 */
-            transition: opacity 0.3s ease; /* 부드럽게 나타나도록 */
-        }
 
-        /* 마우스 호버 시 텍스트 보이기 (정지 시 더 잘 보이게) */
-        .parallax-slider-wrapper:hover .item-text {
-            opacity: 1;
-        }
 
-        .item .item-text h2 {
-            font-size: 1.5em;
-            margin: 0 0 10px;
-        }
-        .item .item-text p {
-            font-size: 0.9em;
-            margin: 0;
-            line-height: 1.5;
-        }
 
-        /* 장식용 칼 아이콘 (위치 조정) */
-        .deco-knife {
-            position: absolute;
-            width: 150px;
-            height: auto;
-            pointer-events: none; /* 클릭 방지 */
-            z-index: 5;
-        }
-        .knife-right { top: 350px; right: 20px; }
-        .knife-left { bottom: 250px; left: 20px; transform: scaleX(-1); }
 
-        /* 무한 슬라이드 애니메이션 정의 */
-        @keyframes scrollLeft {
-            from {
-                transform: translateX(0);
-            }
-            to {
-                /* 콘텐츠 전체 너비의 절반만큼 이동 (복제된 콘텐츠가 이어지도록) */
-                transform: translateX(-50%); 
-            }
-        }
+/* 상세페이지 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.Detail-title {
+    text-align: start;
+    color: #BE3734;
+    font-size: 6.5rem;
+    font-weight: 400;
+    margin-top: 25rem;
+    margin-left: 6rem;
+}
 
-        /* 애니메이션 적용 (기본값) */
-        .slider-row {
-            animation: scrollLeft linear infinite;
-        }
 
-        /* 각 행에 다른 속도 설정 */
-        .row-1 {
-            animation-duration: 40s; /* 가장 느림 */
-        }
-        .row-2 {
-            animation-duration: 25s; /* 중간 속도 */
-        }
-        .row-3 {
-            animation-duration: 15s; /* 가장 빠름 */
-        }
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6rem;
+    width: 109%;
+    max-width: 1800px;
+    margin: 40px auto 0;
+}
 
-        /* JavaScript가 적용될 때 정지 상태를 위한 클래스 */
-        .js-paused {
-            animation-play-state: paused !important;
-        }
+.detail-card a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none; 
+    color: inherit;
+}
+
+.detail-card figure {
+    width: 100%;
+    aspect-ratio: 1 / 1.1; 
+    margin: 0 0 16px 0;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative; 
+    width: 100%;
+    
+   
+    aspect-ratio: 9 / 16; 
+    
+    margin: 0 0 16px 0;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative; 
+}
+
+
+.detail-card figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease; 
+}
+
+
+.detail-card a:hover figure img {
+    transform: scale(1.05);
+}
+
+
+.detail-card figure::after {
+    content: 'Click';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+}
+
+.detail-card a:hover figure::after {
+    opacity: 1; 
+}
+
+
+.detail-card h4 {
+    margin: 0 0 8px 0;
+    font-size: 0.95rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.detail-card h5 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #111;
+    font-weight: 700;
+    line-height: 1.4;
+    word-break: keep-all; 
+}
+
+
+.detail{
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+.detail h2+p{
+    font-size:3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+.detail h2+p+p{
+    margin-bottom: 3rem;
+    text-align: center;
+}
+.detail-swiper figure{
+    position: relative;
+    margin-bottom: 2rem;
+}
+.detail-swiper figure:hover img{
+    filter: brightness(0.4);
+}
+.detail-swiper figure:after{
+    color:#fff;
+    font-size:1.5rem;
+    font-weight: 700;
+    content:"click!";
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    display: none;
+}
+.detail-swiper figure:hover:after{
+    display: block;
+}
+.detail-swiper figure:hover{
+    cursor: pointer;
+}
+.detail-swiper h4{
+    margin-bottom: 0.5rem;
+}
+
+.btn-close{
+    background-color: #fff;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:2.5rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.203);
+    position: sticky;
+    top:1rem;
+    left:50%;
+    transform: translateX(-50%);
+    color: #BE3734;
+}
+.btn-close img{
+    height:1.2rem;
+}
+
+.btn-top{
+    cursor: pointer;
+    background-color: #fff;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:2.5rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.203);
+    position: sticky;
+    top:calc(100vh - 3.5rem);
+    left:50%;
+    transform: translateX(-50%);
+    margin-bottom: 3rem;
+}
+.btn-top img{
+    height:1.2rem;
+}
+
+
+.detail-title {
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: center;
+    font-size: calc(100vw/10);
+    margin-top: 4rem;
+    position: sticky;
+    top:38vh;
+    z-index: -1;
+}
+.detail-content{
+    text-align: center;
+    padding-bottom: 6rem;
+}
+.detail-content h3{
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    font-size:2rem;
+}
+
+.po{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+    position: relative;
+}
+.po:after{
+    content:"";
+    position:absolute;
+    width:1rem;
+    height:0.2rem;
+    background-color: #000;
+    left:50%;
+    bottom:0;
+    transform:translateX(-50%);
+}
+.detail-dl{
+    width:890px;
+    margin:0 auto;
+}
+.detail-dl dt{
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.detail-dl dt span{
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.detail-dl dd{
+    margin-bottom: 3rem;
+    line-height: 140%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- 5. 반응형 웹 디자인 (화면이 좁아질 때) --- */
+@media (max-width: 1024px) {
+    .detail-grid {
+        grid-template-columns: repeat(2, 1fr); /* 태블릿: 2개씩 보기 */
+    }
+}
+
+@media (max-width: 768px) {
+    .detail-grid {
+        grid-template-columns: 1fr; /* 모바일: 1개씩 세로로 보기 */
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

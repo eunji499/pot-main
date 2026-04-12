@@ -1,6 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
 
 
+
+
+// 히어로섹션 배경
+
+            // 1. 우리가 HTML에 작성했던 동영상 태그(.bg-video-layer)를 찾아옵니다.
+            const bgVideo = document.querySelector('.bg-video-layer');
+
+            // 2. 동영상의 재생 속도를 설정합니다.
+            // 1.0은 원래 속도, 0.5는 절반 속도(슬로우 모션), 2.0은 2배속입니다.
+            bgVideo.playbackRate = 0.4; 
+    
+
+
+
+
+
             const elements = document.querySelectorAll('.fade-in-up');
 
             const observer = new IntersectionObserver((entries) => {
@@ -297,19 +313,64 @@ containers.forEach(container => new ElasticLine(container));
 
 
 // 배너
+//   const bannerSlider = new Swiper(".banner-slider",{
+//                     autoplay:{
+//                         delay:3000
+//                     },
+//                     speed:1000,
+//                     loop:true
+//                 })
 
 
+  
+    const bannerSwiper = new Swiper('.banner-slider', {
+        slidesPerView: 1, // 한 번에 한 장씩 보이기
+        spaceBetween: 0,  // 이미지 사이 여백 없음
+        loop: true,       // 무한 반복
 
+        // 🖱️ 마우스 커서를 '잡기' 모양으로 변경하여 드래그 가능함을 강조
+        grabCursor: true, 
 
-
-
-
-     
+        // ⏱️ 자동 재생 설정
+        autoplay: {
+            delay: 3000, // 3000 = 3초마다 다음 슬라이드로 넘어갑니다. (원하는 초로 변경 가능)
+            disableOnInteraction: false, // 사용자가 드래그로 직접 넘긴 후에도 자동 재생이 멈추지 않고 계속되게 합니다.
+        },
     });
 
 
 
 
+    //  상세페이지
+
+    const detailSwiper = new Swiper(".detail-swiper", {
+                    speed: 1000,
+                    slidesPerView: 1.2,
+                    spaceBetween: 14,
+                    // 반응형 브레이크포인트 설정
+                    breakpoints: {
+                        320: {
+                            slidesPerView: 1.6,
+                            spaceBetween: 14
+                        },
+                        480: {
+                            slidesPerView: 2.2, // 모바일 가로 모드쯤에서 2개 정도 보이게 수정
+                            spaceBetween: 14
+                        },
+                        1024: {
+                            slidesPerView: 3,   // 태블릿이나 작은 노트북 화면에서는 3개
+                            spaceBetween: 20
+                        },
+                        1400: {
+                            slidesPerView: 4,   // 🌟 핵심 해결: 큰 PC 화면에서 4개가 보이도록 수정!
+                            spaceBetween: 24    // 4개일 때 여백을 살짝 더 주면 시원해 보입니다.
+                        },
+                    }
+                });
+
+                
+
+});
 
 
 
