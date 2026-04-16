@@ -1,5 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    //위로가기버튼
+    const btnTop = document.querySelector('.btn-top');
+    if (btnTop) {
+        btnTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        })
+    }
+
 
 
 

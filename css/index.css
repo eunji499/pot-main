@@ -191,8 +191,7 @@ button img{
     gap: 2rem;
     border-bottom: 1px solid #BE3734;
     padding-bottom: 5rem;
-    padding: 0 17rem 5rem;
-
+    padding: 0 10rem 5rem;
 }
 
 
@@ -214,7 +213,8 @@ button img{
 }
 
 .lace-style {
-    border: 90px solid transparent; 
+    border: 90px solid transparent;
+    margin: 0 7rem;
     border-image: url(../img/lase-toll.png) 100 round;
 }
 
@@ -226,9 +226,9 @@ button img{
 /* 스킬 그리드 시스템 섹션-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(320px, 1fr));
-    gap: 40px 100px;
-    padding: 2rem 17rem;
+    grid-template-columns: repeat(3, minmax(20px, 1fr));
+    gap: 40px 2rem;
+    padding: 2rem 10rem;
     background-color: #ffffff;
 }
 
@@ -252,7 +252,7 @@ button img{
             color: #333;
             margin-bottom: 5px;
             font-weight: 500;
-            width: 269px;
+            /* width: 269px; */
         }
 
         /* 3. 프로그래스 바 (진행도) */
@@ -260,7 +260,7 @@ button img{
             height: 12px;
             background-color: #e0e0e0; 
             margin-bottom: 12px;
-            width: 269px;
+            /* width: 269px; */
         }
 
         .progress-fill {
@@ -282,12 +282,12 @@ button img{
         }
 
         #pull{
-            grid-column: 2/4;
+            /* grid-column: 2/4; */
         }
 
         .skills-section h2{
             font-size: 2.5rem;
-            padding-left: 17rem;
+            padding-left: 10rem;
             padding-top: 2rem;
             color: #BE3734;
             background-color: #ffffff;
@@ -721,7 +721,8 @@ button img{
       font-size: 22px;
       font-weight: bold;
       color: #fff;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      /* box-shadow: 0 5px 15px rgba(0,0,0,0.2); */
+      /* filter:drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.1)); */
     }
     
 
@@ -1174,11 +1175,21 @@ button img{
     .detail-grid {
         grid-template-columns: repeat(2, 1fr); /* 태블릿: 2개씩 보기 */
     }
+    .lace-style {
+        border: 90px solid transparent;
+        margin: 0 3rem;
+        border-image: url(../img/lase-toll.png) 100 round;
+    }
 }
 
 @media (max-width: 768px) {
     .detail-grid {
         grid-template-columns: 1fr; /* 모바일: 1개씩 세로로 보기 */
+    }
+    .lace-style {
+        border: 90px solid transparent;
+        margin: 0 1rem;
+        border-image: url(../img/lase-toll.png) 100 round;
     }
 }
 
